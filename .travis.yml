@@ -12,7 +12,7 @@ dist: trusty
       - COMMIT=${TRAVIS_COMMIT::7}
 
   before_install:
-    - chmod +x mvnw
+    - chmod a+x mvnw
   install:
     - mvn -N io.takari:maven:wrapper
     - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
