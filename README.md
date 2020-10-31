@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/delock1/apilab2.svg?branch=master)](https://travis-ci.com/delock1/apilab2)
 # Технология разработки программного обеспечения
 # Лабораторная работа №1: создание микросервиса на Spring Boot с базой данных
 ## Сметанин Андрей Михайлович, Группа 3МБД2001
