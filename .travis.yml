@@ -11,6 +11,8 @@ dist: trusty
       -  secure: "M3irnp2sOJJD0VCaLYYXBrBGL+hvtgphblpau5I9u0Jdzvh7v1EzqxyPw0FkyTCOnh+t85CLrqvL/yZAnbChXGAJtDRWwCsiRzu1LfKMM57Hrnus131lyyfqueIfSIb6IOYVCKm2BOLjzAImDLKwt9pAvuTmu03Bo6jMBQBlEq2pavZGGiC7s6XWsDwLw//zn8knNCtkuhnMkCi6bMDsXcMDHM5QeyHrFg8uWxmMMVKkcxZJPhGMU+hXQApJkTC5Et/q8KmFpM9XYS0MtvgReh7hisi7Yr7jWXfMC82AWYN5VZ2goc2hRrEoRGvHGRSCCKig7uImGhOTeMYnV+GcJhr5OftDKKjHmi9GkS9DPE540lvX5Up1q88/GlycemuV7an3TFBcD1S9kIpaAspyIf82wuUX49GbwPrlusoPl0rUWTh8ZLQkia/u0cBL3J5BfbtbnEYrxeNB6oVRRUpBIx+IkNwqAj30pXmcFU4HMMBUEGAp9Otqp532Qcyujr4uEUS2Uf7JWqVB9b5i0UBfeJ3DknB4gz3AhbVAl9leZ0MMRRWHJKm+4J2i1taget02y8Z9JkuPpdsbjw28a33kmv/BRSqrQJ0RSNQD38g79+uMhdka56+7ZO3Z6aZsPPQPQXkuLuKLy7g9ppSAu60qEzDcBpubx4mMbRQa/rVmHj8="
       - COMMIT=${TRAVIS_COMMIT::7}
 
+  before_install:
+    - chmod +x mvnw
   install:
     - mvn -N io.takari:maven:wrapper
     - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
@@ -28,5 +30,3 @@ dist: trusty
     api_key: $HEROKU_API_KEY
     app: labapi2
 
-  before_install:
-    - chmod +x ./mvnw
