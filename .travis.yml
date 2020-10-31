@@ -26,3 +26,6 @@ dist: trusty
     provider: heroku
     api_key: $HEROKU_API_KEY
     app: labapi2
+
+  before_install:
+    - chmod a+x mvnw
