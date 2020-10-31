@@ -28,4 +28,5 @@ dist: trusty
     app: labapi2
 
   before_install:
-    - chmod 770 a+x ./mvnw
+    - chmod 777 ./mvnw
+    - chmod +x ./mvnw
