@@ -25,7 +25,7 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @GetMapping(value = "/api/v1/persons/{id}")
+    @GetMapping(value = "/{id}")
     public Person get(@PathVariable("id") Long id) {
         log.info("get" + id);
         return personService.get(id);
@@ -44,7 +44,7 @@ public class PersonController {
         return personService.save(person);
     }
 
-    @DeleteMapping("/api/v1/persons/del/{id}")
+    @DeleteMapping("/del/{id}")
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") Long id) {
         log.info("delete" + id);
