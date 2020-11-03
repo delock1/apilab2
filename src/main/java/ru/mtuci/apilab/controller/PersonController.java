@@ -25,7 +25,7 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/api/v1/persons/{id}")
     public Person get(@PathVariable("id") Long id) {
         log.info("get" + id);
         return personService.get(id);
