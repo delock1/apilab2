@@ -38,7 +38,7 @@
 <code>curl -X POST http://127.0.0.1:8080/api/v1/persons -d ‘{«name»: «Имя″, "department": "Отдел", "room": 101, "callnumber": 155}’ -H «Content-Type:application/json»</code>
 В ответ будет получен статус <code>200 ОК</code>.
 ##### Удалить запись: 
-<code>curl -X POST http://127.0.0.1:8080/api/v1/persons/{id}</code>
+<code>curl -i -X DELETE http://127.0.0.1:8080/api/v1/persons/del/{id}</code>
 В ответ будет получен статус <code>204 No Content</code>.
 
 ##### Также приложение возвращает значение hostname: 
